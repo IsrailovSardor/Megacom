@@ -1,0 +1,130 @@
+.wrapper {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    padding: 20px;
+    text-transform: uppercase;
+
+
+
+    .wrapper__title {
+        text-align: center;
+        font: 600 24px 'Awesome';
+        padding-bottom: 20px;
+        border-bottom: 1px solid white;
+    }
+
+    .weather__block {
+        display: grid;
+        grid-template-columns: 1fr 0.5fr;
+        place-items: center;
+        gap: 20px;
+        height: calc(100% - 48px);
+
+        .icon {
+            width: auto;
+            height: 80%;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 50%;
+        }
+
+        .weather__block_text {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+            padding: 20px 0;
+
+            .weather__block_week {
+                text-align: end;
+                width: 100%;
+
+                .weather__day {
+                    font: 600 40px 'Awesome';
+                    margin-bottom: 15px;
+                }
+
+                .weather__description {
+                    font: 500 20px 'Awesome';
+                }
+            }
+
+            .weather__temp {
+                text-align: end;
+                font: 600 40px 'Awesome';
+            }
+        }
+    }
+}
+
+.dark {
+    background-color: rgb(61, 64, 65);
+    color: #ffffff;
+}
+
+.light {
+    background-color: rgb(119, 203, 236);
+    color: white;
+}
+
+@media (max-width: 991.98px) {
+    .wrapper {
+        .wrapper__title {
+            font: 600 20px 'Awesome';
+            padding-bottom: 10px;
+        }
+
+        .weather__block {
+            grid-template-columns: 1fr 0.5fr;
+
+            .icon {
+                width: auto;
+                height: 80%;
+            }
+
+            .weather__block_text {
+                .weather__block_week {
+                    .weather__day {
+                        font: 600 24px 'Awesome';
+                        margin-bottom: 5px;
+                    }
+
+                    .weather__description {
+                        font: 500 16px 'Awesome';
+                    }
+                }
+
+                .weather__temp {
+                    font: 600 24px 'Awesome';
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .wrapper {
+        .weather__block {
+            grid-template-columns: 1fr;
+            gap: 0;
+
+            .icon {
+                width: 250px;
+                height: auto;
+            }
+
+            .weather__block_text {
+                padding: 0;
+
+                .weather__block_week {
+                    text-align: center;
+                }
+
+                .weather__temp {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
