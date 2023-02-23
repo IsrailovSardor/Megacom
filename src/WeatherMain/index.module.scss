@@ -87,25 +87,15 @@
                 }
             }
 
-            .dark {
-                background-color: rgb(61, 64, 65);
-                color: #ffffff;
-            }
 
-            .light {
-                background-color: rgb(119, 203, 236);
-                color: white;
-            }
 
             .header__citys {
                 width: 100%;
                 min-height: fit-content;
                 max-height: 350px;
                 border-radius: 10px;
-                background-color: rgb(119, 203, 236);
                 border: 2px solid white;
                 overflow-y: scroll;
-                color: white;
                 display: flex;
                 flex-direction: column;
                 gap: 8px;
@@ -115,7 +105,7 @@
 
                 p {
                     font: 600 15px 'Awesome';
-                    cursor: poAwesome;
+                    cursor: pointer;
                 }
 
                 &::-webkit-scrollbar {
@@ -136,6 +126,16 @@
                 &::-webkit-scrollbar-thumb:hover {
                     background: #555;
                 }
+            }
+
+            .dark {
+                background-color: rgb(61, 64, 65);
+                color: #ffffff;
+            }
+
+            .light {
+                background-color: rgb(119, 203, 236);
+                color: white;
             }
         }
 

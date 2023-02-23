@@ -109,7 +109,7 @@ const WeatherMain = () => {
                         </button>
                     </div>
                     {modalSearch &&
-                        <div className={css.header__citys}>
+                        <div className={cx(css.header__citys, mode ? css.dark : css.light)}>
                             {
                                 cities.length === 0 ?
                                     <p>Такого города нет {")"}</p>
